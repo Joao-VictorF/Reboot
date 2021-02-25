@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reboot/components/bottom_nav.dart';
 import 'package:reboot/screens/collection/collection_screen.dart';
+import 'package:reboot/screens/cart/cart_screen.dart';
 import 'package:reboot/screens/favorites/favorites_screen.dart';
 import 'package:reboot/screens/profile/profile_screen.dart';
 
@@ -24,6 +25,7 @@ class _HomePageState extends State<HomeScreen> {
           controller: _pageController,
           children: <Widget>[
             Body(),
+            CarrinhoScreen(),
             FavoritesScreen(),
             CollectionScreen(),
             ProfileScreen(),

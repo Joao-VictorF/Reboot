@@ -20,13 +20,17 @@ class _BottomNavState extends State<BottomNav> {
         color = Color.fromRGBO(133, 102, 235, 1);
         break;
       case 1:
-        color = Colors.red[300];
+        color = kPrimaryColor;
         break;
       case 2:
-        color = kPrimaryColor;
+        color = Colors.red[300];
         break;
       case 3:
         color = Colors.green[300];
+        break;
+      case 4:
+        color = Colors.blue[300];
+        break;
     }
 
     return color;
@@ -55,6 +59,10 @@ class _BottomNavState extends State<BottomNav> {
                   text: 'Inicio',
                 ),
                 GButton(
+                  icon: LineIcons.shopping_cart,
+                  text: 'Carrinho',
+                ),
+                GButton(
                   icon: LineIcons.heart_o,
                   text: 'Favoritos',
                 ),
@@ -62,7 +70,7 @@ class _BottomNavState extends State<BottomNav> {
                   icon: LineIcons.archive,
                   text: 'Coleção',
                 ),
-                GButton(
+                GButton( 
                   icon: LineIcons.user,
                   text: 'João',
                 ),

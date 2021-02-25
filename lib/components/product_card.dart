@@ -5,9 +5,10 @@ import 'package:reboot/models/Product.dart';
 
 import '../constants.dart';
 import '../size_config.dart';
+import '../localStorage.dart';
 
 class ProductCard extends StatefulWidget {
-   ProductCard({
+  ProductCard({
     Key key,
     this.width = 160,
     @required this.product,
@@ -77,11 +78,14 @@ class _ProductCardState extends State<ProductCard> {
                           setState(() {
                             widget.product.inCart = !widget.product.inCart;
                           });
+
+                          widget.product.inCart
+                          ? addItemToCart(widget.product)
+                          : removeItemFromCart(widget.product);
                         },
                         child: Container(
                           padding: EdgeInsets.all(getProportionateScreenWidth(8)),
-                          height: getProportionateScreenWidth(28),
-                          width: getProportionateScreenWidth(28),
+                          height: getProportionateScreenWidth(35),
                           decoration: BoxDecoration(
                             color: widget.product.inCart
                               ? Color.fromRGBO(133, 102, 235, 1).withOpacity(.6)
@@ -89,12 +93,15 @@ class _ProductCardState extends State<ProductCard> {
                               : kSecondaryColor.withOpacity(0.1),
                             shape: BoxShape.circle,
                           ),
-                          child: SvgPicture.asset(
-                            "assets/icons/Cart Icon.svg",
+                          child: 
+                          Icon(
+                            widget.product.inCart
+                            ? LineIcons.shopping_cart
+                            : LineIcons.cart_arrow_down,
                             color: widget.product.inCart
                                 ? Colors.white
                                 : Colors.black54,
-                          ),
+                          )
                         ),
                       ),
                       const SizedBox(width: 10),

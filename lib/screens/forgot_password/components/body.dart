@@ -18,14 +18,14 @@ class Body extends StatelessWidget {
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: Column(
             children: [
-              SizedBox(height: SizeConfig.screenHeight * 0.04),
+              // SizedBox(height: SizeConfig.screenHeight * 0.04),
               Image.asset(
                 "assets/images/illustrations/forgot_pass.gif",
-                height: getProportionateScreenHeight(300),
+                height: getProportionateScreenHeight(120),
                 width: getProportionateScreenWidth(270),
               ),
               Text(
-                "Esqueci a senha",
+                "Esqueceu a senha?",
                 style: TextStyle(
                   fontSize: getProportionateScreenWidth(28),
                   color: Colors.black,

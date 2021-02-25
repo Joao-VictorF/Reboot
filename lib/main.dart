@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:reboot/routes.dart';
 import 'package:reboot/screens/splash/initial_splash.dart';
 import 'package:reboot/theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  SharedPreferences.setMockInitialValues({});
   runApp(MyApp());
 }
 

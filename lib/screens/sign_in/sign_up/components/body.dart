@@ -17,10 +17,10 @@ class Body extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: SizeConfig.screenHeight * 0.04), // 4%
+                // SizedBox(height: SizeConfig.screenHeight * 0.04), // 4%
                 Image.asset(
                   "assets/images/illustrations/sign_up.gif",
-                  height: getProportionateScreenHeight(300),
+                  height: getProportionateScreenHeight(120),
                   width: getProportionateScreenWidth(270),
                 ),
                 Text("Criar conta", style: headingStyle),
